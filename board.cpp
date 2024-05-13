@@ -43,13 +43,15 @@ bool Board::isFinished() {
     bool isFull = true;
     for (auto & row : gameState) {
         for (char col : row) {
-            if (col == ' ') {
+            if (col == '-') {
                 isFull = false; // Plansza nie jest pełna
                 break;
             }
         }
     }
-    if (isFull) {return true;}
+    if (isFull) {
+        return true;
+        }
     return false; // Gra nie zakończona
 }
 bool Board::makeMove(char symbol, int position) {
