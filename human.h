@@ -1,8 +1,14 @@
-//
-// Created by Canary on 5/5/2024.
-//
+#ifndef HUMAN_H
+#define HUMAN_H
 
-#ifndef TIC_TAC_TOE_HUMAN_H
-#define TIC_TAC_TOE_HUMAN_H
+#include "player.h"
 
-#endif //TIC_TAC_TOE_HUMAN_H
+class Human : public Player {
+public:
+    Human(char s);
+    void makeMove(Board& board, int position) override;
+private:
+    char symbol;
+};
+
+#endif // HUMAN_H

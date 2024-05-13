@@ -1,5 +1,7 @@
-//
-// Created by Canary on 5/5/2024.
-//
+#include "Human.h"
 
-#include "human.h"
+Human::Human(char s) : symbol(s) {}
+
+void Human::makeMove(Board& board, int position) {
+    board.makeMove(symbol, position);
+}

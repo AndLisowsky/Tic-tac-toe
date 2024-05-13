@@ -1,8 +1,20 @@
-//
-// Created by Canary on 5/5/2024.
-//
+#ifndef GAME_H
+#define GAME_H
 
-#ifndef TIC_TAC_TOE_GAME_H
-#define TIC_TAC_TOE_GAME_H
+#include "player.h"
+#include "board.h"
 
-#endif //TIC_TAC_TOE_GAME_H
+class Game {
+private:
+    Board board;
+    Player* player1;
+    Player* player2;
+    int whoseMove;
+
+public:
+    Game(Player* p1, Player* p2);
+    ~Game();
+    void launch(std::string mode);
+};
+
+#endif

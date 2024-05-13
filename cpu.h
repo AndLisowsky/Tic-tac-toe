@@ -1,8 +1,13 @@
-//
-// Created by Canary on 5/5/2024.
-//
+#ifndef CPU_H
+#define CPU_H
 
-#ifndef TIC_TAC_TOE_CPU_H
-#define TIC_TAC_TOE_CPU_H
+/* #include "player.h"
+#include <string>
 
-#endif //TIC_TAC_TOE_CPU_H
+class CPU : public Player {
+public:
+    CPU(const std::string& nick, const std::string& sym) : Player(nick, sym) {}
+    void makeMove(Board& board, int position) override;
+};
+*/
+#endif

@@ -1,8 +1,18 @@
-//
-// Created by Canary on 5/5/2024.
-//
+#ifndef BOARD_H
+#define BOARD_H
 
-#ifndef TIC_TAC_TOE_BOARD_H
-#define TIC_TAC_TOE_BOARD_H
+#include <iostream>
+#include <array>
 
-#endif //TIC_TAC_TOE_BOARD_H
+class Board {
+private:
+    char gameState[3][3]{};
+
+public:
+    Board();
+    void drawBoard() const;
+    bool isFinished();
+    bool makeMove(char symbol, int position);
+};
+
+#endif
