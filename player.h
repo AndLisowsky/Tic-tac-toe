@@ -8,9 +8,10 @@ class Player {
 protected:
     std::string nickname;
     char symbol;
-
 public:
-    virtual void makeMove(Board& board, int position) = 0;
+    Player(const std::string& nick, char sym) : nickname(nick), symbol(sym) {}
+    virtual bool makeMove(Board& board, int position) = 0;
+    virtual ~Player() {};
 };
 
 #endif

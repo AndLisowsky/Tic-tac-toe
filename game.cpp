@@ -17,10 +17,10 @@ void Game::launch(std::string mode) {
 
         std::cout << "Player " << whoseMove << "'s turn" << std::endl;
         std::cout << "Enter position to make a move: ";
-        std::cin >> position;
-
-        currentPlayer->makeMove(board, position);
-
+        while (!currentPlayer->makeMove(board, position)) {
+            std::cin >> position;
+            currentPlayer->makeMove(board, position);
+        }
         whoseMove = (whoseMove == 1) ? 2 : 1; // Przełącz grę na następnego gracza
         board.drawBoard(); // Narysuj planszę po ruchu
     }

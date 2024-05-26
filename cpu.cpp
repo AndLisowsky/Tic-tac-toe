@@ -1,11 +1,13 @@
 #include "cpu.h"
-#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
-/* void CPU::makeMove(Board& board, int position) {
-    if (board.makeMove(symbol, position)) {
-        std::cout << "CPU " << nickname << " moves to position " << position << std::endl;
-        board.drawBoard();
-    } else {
-        std::cout << "Invalid move! Try again." << std::endl;
+bool CPU::makeMove(Board& board, int position) {
+    std::srand(std::time(0));
+    bool moveMade = false;
+
+    while (!moveMade) {
+        int posx = std::rand() % 9 + 1; //random position (1-9)
+        moveMade = board.makeMove(symbol, posx);
     }
-} */
+}

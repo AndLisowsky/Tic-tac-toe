@@ -5,10 +5,8 @@
 
 class Human : public Player {
 public:
-    Human(char s);
-    void makeMove(Board& board, int position) override;
-private:
-    char symbol;
+    Human(const std::string& nick, char sym) : Player(nick, sym) {};
+    bool makeMove(Board& board, int position) override;
 };
 
 #endif // HUMAN_H

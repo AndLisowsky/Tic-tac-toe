@@ -1,13 +1,12 @@
 #ifndef CPU_H
 #define CPU_H
 
-/* #include "player.h"
-#include <string>
+#include "player.h"
 
 class CPU : public Player {
 public:
-    CPU(const std::string& nick, const std::string& sym) : Player(nick, sym) {}
-    void makeMove(Board& board, int position) override;
+    CPU(const std::string& nick, char sym) : Player(nick, sym) {};
+    bool makeMove(Board& board, int position) override;
 };
-*/
+
 #endif
