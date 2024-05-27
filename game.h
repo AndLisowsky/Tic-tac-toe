@@ -14,7 +14,7 @@ private:
 public:
     Game(Player* p1, Player* p2);
     ~Game();
-    void launch(std::string mode);
+    void launch(int mode);
 };
 
 #endif

@@ -10,6 +10,7 @@ Board::Board() {
 }
 
 void Board::drawBoard() const {
+    std::cout << std::endl;
     for (auto i : gameState) {
         for (int j = 0; j < 3; ++j) {
             std::cout << i[j] << " ";
@@ -39,21 +40,19 @@ bool Board::isFinished() {
     if (gameState[0][2] != '-' && gameState[0][2] == gameState[1][1] && gameState[0][2] == gameState[2][0]) {
         return true; // Wygrana przekątnej (od prawej górnej do lewej dolnej)
     }
+}
+
+bool Board::isFull() {
     // Sprawdzenie pełnej planszy
-    bool isFull = true;
     for (auto & row : gameState) {
         for (char col : row) {
             if (col == '-') {
-                isFull = false; // Plansza nie jest pełna
-                break;
-            }
+                return false; // Plansza nie jest pełna
+            } else return true;
         }
     }
-    if (isFull) {
-        return true;
-        }
-    return false; // Gra nie zakończona
 }
+
 bool Board::makeMove(char symbol, int position) {
     int row = (position - 1) / 3;
     int col = (position - 1) % 3;

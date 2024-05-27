@@ -12,7 +12,9 @@ public:
     Board();
     void drawBoard() const;
     bool isFinished();
+    bool isFull();
     bool makeMove(char symbol, int position);
+    friend class CPU;
 };
 
 #endif

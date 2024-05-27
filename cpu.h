@@ -2,6 +2,7 @@
 #define CPU_H
 
 #include "player.h"
+#include "board.h"
 
 class CPU : public Player {
 public:
@@ -9,4 +10,4 @@ public:
     bool makeMove(Board& board, int position) override;
 };
 
-#endif
+#endif // CPU_H
