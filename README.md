@@ -1,39 +1,15 @@
 # Tic-Tac-Toe Game
 
 ## Opis
-Projekt przedstawia implementację gry w kółko i krzyżyk (Tic-Tac-Toe) w języku C++. Gra umożliwia rozgrywkę między dwoma graczami ludzkimi.
+Projekt przedstawia konsolową adaptację gry w kółko i krzyżyk (Tic-Tac-Toe) w języku C++. Gra umożliwia rozgrywkę między dwoma graczami bądź między graczem a komputerem.
 
-## Struktura plików
-Projekt składa się z następujących plików:
-
-- `main.cpp`: Plik startowy zawierający funkcję `main`.
-- `Player.h`: Plik nagłówkowy dla klasy bazowej `Player`.
-- `Human.h`: Plik nagłówkowy dla klasy `Human`, dziedziczącej po `Player`.
-- `Human.cpp`: Plik źródłowy zawierający implementację klasy `Human`.
-- `Board.h`: Plik nagłówkowy dla klasy `Board`, reprezentującej planszę do gry.
-- `Board.cpp`: Plik źródłowy zawierający implementację klasy `Board`.
-- `Game.h`: Plik nagłówkowy dla klasy `Game`, zarządzającej rozgrywką.
-- `Game.cpp`: Plik źródłowy zawierający implementację klasy `Game`.
 
 ## Klasy
 - **Player**: Klasa bazowa dla wszystkich typów graczy. Zawiera wirtualną metodę `makeMove`.
 - **Human**: Klasa reprezentująca gracza ludzkiego. Dziedziczy po `Player` i implementuje metodę `makeMove`.
+- **CPU**: Klasa odpowiedzialna za logikę AI (tryb singleplayer).
 - **Board**: Klasa reprezentująca planszę do gry. Zawiera metody do rysowania planszy, sprawdzania stanu gry oraz wykonywania ruchów.
 - **Game**: Klasa zarządzająca rozgrywką. Inicjalizuje planszę oraz graczy, kontroluje przebieg gry.
-
-## Kompilacja i uruchomienie
-Aby skompilować i uruchomić projekt, wykonaj następujące kroki:
-
-1. Skopiuj wszystkie pliki źródłowe do jednego katalogu.
-2. Otwórz terminal lub wiersz poleceń i przejdź do tego katalogu.
-3. Wpisz poniższą komendę, aby skompilować projekt (zakładając, że używasz kompilatora `g++`):
-    ```sh
-    g++ -o TicTacToe main.cpp Human.cpp Board.cpp Game.cpp
-    ```
-4. Uruchom skompilowany program:
-    ```sh
-    ./TicTacToe
-    ```
 
 ## Instrukcja gry
 1. Po uruchomieniu programu, gra rozpocznie się od wyboru trybu gry:
