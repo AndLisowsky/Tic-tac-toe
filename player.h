@@ -12,6 +12,7 @@ public:
     Player(const std::string& nick, char sym) : nickname(nick), symbol(sym) {}
     virtual bool makeMove(Board& board, int position) = 0;
     virtual ~Player() {};
+    std::string getName() const;
 };
 
 #endif

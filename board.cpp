@@ -19,6 +19,7 @@ void Board::drawBoard() const {
     }
 }
 
+
 bool Board::isFinished() {
     // Sprawdzenie wygranej
     // Sprawdzenie wierszy
@@ -40,6 +41,7 @@ bool Board::isFinished() {
     if (gameState[0][2] != '-' && gameState[0][2] == gameState[1][1] && gameState[0][2] == gameState[2][0]) {
         return true; // Wygrana przekątnej (od prawej górnej do lewej dolnej)
     }
+    return false;
 }
 
 bool Board::isFull() {
@@ -48,9 +50,10 @@ bool Board::isFull() {
         for (char col : row) {
             if (col == '-') {
                 return false; // Plansza nie jest pełna
-            } else return true;
+            }
         }
     }
+    return true;
 }
 
 bool Board::makeMove(char symbol, int position) {
@@ -65,4 +68,20 @@ bool Board::makeMove(char symbol, int position) {
     }
 }
 
+std::array<std::array<char, 3>, 3> Board::getState() const {
+    std::array<std::array<char, 3>, 3> state;
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            state[i][j] = gameState[i][j];
+        }
+    }
+    return state;
+}
 
+void Board::setState(const std::array<std::array<char, 3>, 3>& state) {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            gameState[i][j] = state[i][j];
+        }
+    }
+}

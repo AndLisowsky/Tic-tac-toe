@@ -9,6 +9,8 @@ private:
     char gameState[3][3]{};
 
 public:
+    std::array<std::array<char, 3>, 3> getState() const;
+    void setState(const std::array<std::array<char, 3>, 3>& state);
     Board();
     void drawBoard() const;
     bool isFinished();
