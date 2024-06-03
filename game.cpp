@@ -14,7 +14,7 @@ void Game::launch(int mode) {
     int moveCount = 1;
     while (!board.isFull()) {
         int position = 0;
-        Player *currentPlayer = (whoseMove == 1) ? player1 : player2;
+        Player *currentPlayer = (whoseMove == 1) ? player1 : player2; //przełączanie graczy
 
         std::cout << currentPlayer->getName() << "'s turn" << std::endl;
         bool moveMade = false;
@@ -42,7 +42,7 @@ void Game::launch(int mode) {
             board.drawBoard(); // Narysuj planszę po ruchu
         }
 
-        if (board.isFinished()) break;
+        if (board.isFinished()) break; //przerwij pętlę, jeśli jest zwycięzca
     }
 
     if (board.isFinished()) {

@@ -28,30 +28,32 @@ Projekt przedstawia konsolową adaptację gry w kółko i krzyżyk (Tic-Tac-Toe)
 5. Gra kończy się, gdy jeden z graczy wygra lub gdy plansza zostanie całkowicie wypełniona.
 
 ## Przykład użycia
+```
 Przykład gry może wyglądać tak:
 Player 1's turn
 Enter position to make a move: 1
 
-// X - -
-// - - -
-// - - -
+
+ X - -
+ - - -
+ - - -
 
 Player 2's turn
 Enter position to make a move: 5
 
-// X - -
-// - O -
-// - - -
+ X - -
+ - O -
+ - - -
 
 Player 1's turn
 Enter position to make a move: 2
 
-// X X -
-// - O -
-// - - -
+ X X -
+ - O -
+ - - -
 
 ... (gra trwa, aż do wygranej lub remisu)
-
+```
 
 ## Uwagi
 Program nie radzi sobie z wprowadzaniem liczb wielocyfrowych oraz znaków innych niż cyfry.

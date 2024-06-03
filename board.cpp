@@ -67,7 +67,7 @@ bool Board::makeMove(char symbol, int position) {
         return false;
     }
 }
-
+//funkcja do zapisywania stanu planszy przed ruchem CPU
 std::array<std::array<char, 3>, 3> Board::getState() const {
     std::array<std::array<char, 3>, 3> state;
     for (int i = 0; i < 3; ++i) {
@@ -77,7 +77,7 @@ std::array<std::array<char, 3>, 3> Board::getState() const {
     }
     return state;
 }
-
+//funkcja do przywracania planszy (np. dla testowania kolejnych opcji)
 void Board::setState(const std::array<std::array<char, 3>, 3>& state) {
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
