@@ -6,7 +6,6 @@ bool Human::makeMove(Board& board, int position) {
         std::cout << "Invalid position. Try again." << std::endl;
         return false;
     } else {
-        // Wywołaj makeMove i sprawdź jego wynik
         bool success = board.makeMove(symbol, position);
         if (success) {
             return true;

@@ -10,7 +10,6 @@ Game::~Game() {
 }
 
 void Game::launch(int mode) {
-    board.drawBoard(); // Narysuj planszę na początku gry
     int moveCount = 1;
     while (!board.isFull()) {
         int position = 0;
@@ -39,10 +38,10 @@ void Game::launch(int mode) {
         if (moveMade) {
             moveCount++;
             whoseMove = (whoseMove == 1) ? 2 : 1; // Przełącz grę na następnego gracza tylko, gdy ruch jest poprawny
-            board.drawBoard(); // Narysuj planszę po ruchu
+            board.drawBoard();
         }
 
-        if (board.isFinished()) break; //przerwij pętlę, jeśli jest zwycięzca
+        if (board.isFinished()) break;
     }
 
     if (board.isFinished()) {
